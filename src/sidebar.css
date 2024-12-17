@@ -1,0 +1,198 @@
+/* src/sidebar.css */
+
+/* General Reset and Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Status Section */
+#status {
+  font-size: 14px;
+  padding: 10px;
+  background-color: #e8f4fc;
+  border: 1px solid #b6e2f3;
+  border-radius: 8px;
+  color: #005a9e;
+  margin-bottom: 15px;
+}
+
+/* Status Classes */
+.availability-unknown {
+  color: black;
+}
+
+.availability-available {
+  color: green;
+}
+
+.availability-waitlist {
+  color: orange;
+}
+
+.availability-unavailable {
+  color: red;
+}
+
+/* Input Section */
+#inputSection {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+#inputSection label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 100px;
+}
+
+#inputSection input {
+  width: calc(100% - 110px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#inputSection .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#inputSection .check-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#inputSection .check-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Reset Section */
+#resetSection {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#resetSection button {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  background-color: #f44336;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+#resetSection button:hover {
+  background-color: #d32f2f;
+}
+
+#resetSection #uncheckAllButton {
+  background-color: #ff9800;
+}
+
+#resetSection #uncheckAllButton:hover {
+  background-color: #fb8c00;
+}
+
+/* Resort Section */
+#resortSection {
+  margin-top: 15px;
+}
+
+#resortSection button {
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#resortSection button:hover {
+  background-color: #388e3c;
+}
+
+#resortData {
+  margin-top: 15px;
+}
+
+/* Resort List */
+.resortList {
+  list-style: none;
+  padding: 0;
+}
+
+.resortList li {
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.resortList li:hover {
+  transform: scale(1.02);
+}
+
+/* Add cursor styles for headers */
+.regionHeader,
+.stateHeader {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Optional: Add expand/collapse indicator */
+.regionHeader::before,
+.stateHeader::before {
+  content: '▶';
+  margin-right: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.regionHeader.expanded::before,
+.stateHeader.expanded::before {
+  transform: rotate(90deg);
+}
