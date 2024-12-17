@@ -1,0 +1,44 @@
+<!-- src/sidebar.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Club Mahindra Status Checker</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sidebar.css" />
+  </head>
+  <body>
+    <div id="status">Extension loaded, reload page or login...</div>
+
+    <!-- Input section -->
+    <!-- Availability form-->
+    <div id="availabilityFormSection" class="hidden">
+      <div id="inputSection">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" />
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" />
+
+        <button class="check-btn" id="checkAvailabilityButton">
+          Check Availability
+        </button>
+      </div>
+      <!-- Reset section -->
+      <div id="resetSection">
+        <!-- Hide buttons section initially -->
+        <button id="resetButton">Reset</button>
+        <button id="uncheckAllButton">Uncheck All</button>
+      </div>
+    </div>
+
+    <!-- Resort section -->
+    <div id="resortSection" class="hidden">
+      <br />
+      <button id="getResortsButton" class="hidden">Get Resorts</button>
+      <div id="resortData"></div>
+    </div>
+    <!-- </div> -->
+    <script src="sidebar/sidebar.ts" type="module"></script>
+  </body>
+</html>
